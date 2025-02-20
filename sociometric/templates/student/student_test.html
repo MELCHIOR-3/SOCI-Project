@@ -1,0 +1,230 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>SOCI - Социометрия</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_home.css' %}">
+
+    <style>
+      .error {
+          color: red;
+          display: none; /* Скрываем сообщение об ошибке по умолчанию */
+      }
+    </style>
+
+  </head>
+
+  <body id="body">
+    <header class="navigation">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg p-0">
+                <a class="navbar-brand" >
+                  SOCI
+                </a>
+                <div class="collapse navbar-collapse ml-auto" id="navbarsExample09">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item @@contact"></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+    <section class="slider">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 style="color: white;">Социометрия</h2>
+            <h2 style="color: rgb(182, 182, 182);">В ответе указывайте фамилию и имя вашего одноклассника.</h2>
+            <br>
+            <form method="POST"> 
+              {% csrf_token %} 
+                <div class="mb-3">
+                    <label style="color: white;" for="exampleInputEmail1" class="form-label">{{first_question_A}}:</label>
+                    <input type="FirstA" name="answer_1A1" id="myInput1" class="form-control">
+                    <p  id="error1">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                    <br>
+                    <input type="FirstA" name="answer_1A2" id="myInput2" class="form-control">
+                    <p  id="error2">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                    <br>
+                    <input type="FirstA" name="answer_1A3" id="myInput3" class="form-control">
+                    <p  id="error3">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                </div>
+                <div class="mb-3">
+                    <label style="color: white;" for="exampleInputEmail1" class="form-label">{{first_question_B}}:</label>
+                    <input type="FirstB" name="answer_1B1" id="myInput4" class="form-control">
+                    <p  id="error4">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                    <br>
+                    <input type="FirstB" name="answer_1B2" id="myInput5" class="form-control">
+                    <p  id="error5">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                    <br>
+                    <input type="FirstB" name="answer_1B3" id="myInput6" class="form-control">
+                    <p  id="error6">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                </div>
+                <div class="mb-3">
+                    <label style="color: white;" for="exampleInputEmail1" class="form-label">{{second_question_A}}:</label>
+                    <input type="SecondA" name="answer_2A1" id="myInput7" class="form-control">
+                    <p  id="error7">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                    <br>
+                    <input type="SecondA" name="answer_2A2" id="myInput8" class="form-control">
+                    <p  id="error8">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                    <br>
+                    <input type="SecondA" name="answer_2A3" id="myInput9" class="form-control">
+                    <p  id="error9">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                </div>
+                <div class="mb-3">
+                    <label style="color: white;" for="exampleInputEmail1" class="form-label">{{second_question_B}}:</label>
+                    <input type="SecondB" name="answer_2B1" id="myInput10" class="form-control">
+                    <p  id="error10">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                    <br>
+                    <input type="SecondB" name="answer_2B2" id="myInput11" class="form-control">
+                    <p  id="error11">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                    <br>
+                    <input type="SecondB" name="answer_2B3" id="myInput12" class="form-control">
+                    <p  id="error12">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                </div>
+                <div class="mb-3">
+                    <label style="color: white;" for="exampleInputEmail1" class="form-label">{{third_question_A}}:</label>
+                    <input type="ThirdA" name="answer_3A1" id="myInput13" class="form-control">
+                    <p  id="error13">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                    <br>
+                    <input type="ThirdA" name="answer_3A2" id="myInput14" class="form-control">
+                    <p  id="error14">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                    <br>
+                    <input type="ThirdA" name="answer_3A3" id="myInput15" class="form-control">
+                    <p  id="error15">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                </div>
+                <div class="mb-3">
+                    <label style="color: white;" for="exampleInputEmail1" class="form-label">{{third_question_B}}:</label>
+                    <input type="ThirdB" name="answer_3B1" id="myInput16" class="form-control">
+                    <p  id="error16">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                    <br>
+                    <input type="ThirdB" name="answer_3B2" id="myInput17" class="form-control">
+                    <p  id="error17">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                    <br>
+                    <input type="ThirdB" name="answer_3B3" id="myInput18" class="form-control">
+                    <p  id="error18">Неправильное значение! Пожалуйста, перепроверьте правильность написания фамилии и имени одноклассника.</p>
+                </div>
+                <button id="myButton" type="submit" class="btn btn-primary" disabled>Сохранить ответы</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="copyright mb-0">MIT license</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <div id="scroll-to-top" class="scroll-to-top">
+      <span class="icon ion-ios-arrow-up"></span>
+    </div>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    {{ data|json_script:"index_st" }}
+    <script>
+        // Список допустимых значений
+        const validValues_str = (JSON.parse(document.getElementById('index_st').textContent)).split('"').join('');
+        const validValues = validValues_str.split('/');
+        console.log(validValues)
+        if (Array.isArray(validValues)) {
+          validValues.forEach(item => {
+            console.log(item);
+          });
+        } else {
+          console.log('The value is not an array.');
+        }
+
+        const inputs = [
+            document.getElementById('myInput1'),
+            document.getElementById('myInput2'),
+            document.getElementById('myInput3'),
+            document.getElementById('myInput4'),
+            document.getElementById('myInput5'),
+            document.getElementById('myInput6'),
+            document.getElementById('myInput7'),
+            document.getElementById('myInput8'),
+            document.getElementById('myInput9'),
+            document.getElementById('myInput10'),
+            document.getElementById('myInput11'),
+            document.getElementById('myInput12'),
+            document.getElementById('myInput13'),
+            document.getElementById('myInput14'),
+            document.getElementById('myInput15'),
+            document.getElementById('myInput16'),
+            document.getElementById('myInput17'),
+            document.getElementById('myInput18')
+        ];
+
+        const errors = [
+            document.getElementById('error1'),
+            document.getElementById('error2'),
+            document.getElementById('error3'),
+            document.getElementById('error4'),
+            document.getElementById('error5'),
+            document.getElementById('error6'),
+            document.getElementById('error7'),
+            document.getElementById('error8'),
+            document.getElementById('error9'),
+            document.getElementById('error10'),
+            document.getElementById('error11'),
+            document.getElementById('error12'),
+            document.getElementById('error13'),
+            document.getElementById('error14'),
+            document.getElementById('error15'),
+            document.getElementById('error16'),
+            document.getElementById('error17'),
+            document.getElementById('error18')
+        ];
+        console.log(inputs)
+        console.log(errors)
+        const button = document.getElementById('myButton');
+
+
+        // Функция для проверки значений
+        function checkValues() {
+            let allValid = true;
+
+            inputs.forEach((input, index) => {
+                const inputValue = input.value;
+                if (validValues.includes(inputValue)) {
+                    errors[index].style.display = 'none'; // Скрыть сообщение об ошибке
+                } else {
+                    errors[index].style.display = 'block'; // Показать сообщение об ошибке
+                    allValid = false; // Установить флаг, что не все значения валидны
+                }
+            });
+
+            button.disabled = !allValid; // Разрешить или запретить нажатие кнопки
+        }
+
+
+        // Добавляем обработчики событий на ввод
+        inputs.forEach(input => {
+            input.addEventListener('input', checkValues);
+        });
+    </script>
+  </body>
+
+</html>
+   

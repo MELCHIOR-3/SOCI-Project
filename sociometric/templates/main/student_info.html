@@ -1,0 +1,239 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>SOCI - Социометрия</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_home.css' %}">
+
+  </head>
+
+  <body id="body">
+    <header class="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg p-0">
+              <a class="navbar-brand" href="{% url 'home' %}">
+                SOCI {{school}}
+              </a>
+              <div class="collapse navbar-collapse ml-auto" id="navbarsExample09">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item @@contact"><a class="nav-link" href="{% url 'logout' %}">ВЫХОД</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="slider">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 style="color: white;">{{ surname }} {{ name }} {{ patronymic }} {{ student_class }}</h2>
+            <h2 style="color: rgb(150, 150, 150);">({{ student_status }})</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section">
+      <div class="container">
+        <h2>Положительные выборы:</h2>
+        <hr>
+        <h2>{{first_question_A}}</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>1. {{answer_1A1}} ({{answer_1A1_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_1A1_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>2. {{answer_1A2}} ({{answer_1A2_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_1A2_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>3. {{answer_1A3}} ({{answer_1A3_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_1A3_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <hr>
+        <h2>{{second_question_A}}</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>1. {{answer_2A1}} ({{answer_2A1_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_1A1_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>2. {{answer_2A2}} ({{answer_2A2_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_2A2_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>3. {{answer_2A3}} ({{answer_2A3_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_2A3_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <hr>
+        <h2>{{third_question_A}}</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>1. {{answer_3A1}} ({{answer_3A1_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_3A1_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>2. {{answer_3A2}} ({{answer_3A2_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_3A2_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>3. {{answer_3A3}} ({{answer_3A3_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_3A3_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <br>
+        <br>
+        <h2>Отрицательные выборы:</h2>
+        <hr>
+        <h2>{{first_question_B}}</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>1. {{answer_1B1}} ({{answer_1B1_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_1B1_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>2. {{answer_1B2}} ({{answer_1B2_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_1B2_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>3. {{answer_1B3}} ({{answer_1B3_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_1B3_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <hr>
+        <h2>{{second_question_B}}</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>1. {{answer_2B1}} ({{answer_2B1_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_2B1_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>2. {{answer_2B2}} ({{answer_2B2_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_2B2_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>3. {{answer_2B3}} ({{answer_2B3_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_2B3_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <hr>
+        <h2>{{third_question_B}}</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>1. {{answer_3B1}} ({{answer_3B1_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_3B1_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>2. {{answer_3B2}} ({{answer_3B2_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_3B2_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>3. {{answer_3B3}} ({{answer_3B3_student_status}}) <a href="http://127.0.0.1:8000/home/class/student_info/{{answer_3B3_student_id}}" class="btn btn-main animated fadeInUp" >Подробнее</a></h2>
+              </div>
+            </div>  
+          </div>
+        </div>
+        <hr>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="copyright mb-0">MIT license</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <div id="scroll-to-top" class="scroll-to-top">
+      <span class="icon ion-ios-arrow-up"></span>
+    </div>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+
+</html>
+   

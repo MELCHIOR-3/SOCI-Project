@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <form class="form-signin" method="POST">  
+        {% csrf_token %}   
+        <h2 class="form-signin-heading">Вход</h2>
+        <input type="text" class="form-control" name="surname" placeholder="Фамилия" required="" autofocus="" />
+        <br>
+        <input type="text" class="form-control" name="name" placeholder="Имя" required="" autofocus="" />
+        <br>
+        <input type="text" class="form-control" name="patronymic" placeholder="Отчество" required="" autofocus="" />
+        <br>
+        <input type="text" class="form-control" name="year" placeholder="Год рождения" required="" autofocus="" />
+        <br>
+        <input type="text" class="form-control" name="class" placeholder="Класс" required="" autofocus="" />
+        <br>
+        <input type="text" class="form-control" name="litera" placeholder="Литера" required="" autofocus="" />
+        <div class="d-grid gap-2">
+            <br>
+            <hr>
+          <button class="btn btn-primary" type="button submit" value="Sign In">Войти</button>
+        </div>  
+      </form>
+    </div>
+  </body>
+</html>

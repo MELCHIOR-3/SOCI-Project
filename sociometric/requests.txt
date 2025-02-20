@@ -1,0 +1,4 @@
+django
+mysqlclient
+urllib.parse
+numpy

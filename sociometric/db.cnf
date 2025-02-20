@@ -1,0 +1,6 @@
+[client]
+database = 'dev_soci'
+user = 'dev_user'
+password = 'Dev_user13'
+host = '89.111.141.89'
+port = '22'
